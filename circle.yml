@@ -1,7 +1,7 @@
 machine:
   environment:
     DISPLAY: :99
-    PATH: "/home/ubuntu/testpilot/firefox:$PATH"
+    PATH: "/home/ubuntu/foxpuppet-circleci/firefox:$PATH"
     MOZ_HEADLESS: 1
   post:
     - pyenv global 2.7.12 3.6.1
