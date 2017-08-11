@@ -3,6 +3,7 @@ machine:
     DISPLAY: :99
     PATH: "/home/ubuntu/foxpuppet-circleci/firefox:$PATH"
     MOZ_HEADLESS: 1
+    PYTEST_ADDOPTS: "-n 4"
   post:
     - pyenv global 2.7.12 3.6.1
 
