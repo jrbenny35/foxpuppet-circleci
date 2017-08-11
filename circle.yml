@@ -8,10 +8,9 @@ machine:
 
 dependencies:
   override:
-    - ./install-test-dependencies.sh
     - git clone https://github.com/mozilla/FoxPuppet.git
 
 test:
   override:
-    - cd FoxPuppet && mkdir results && tox
+    - cd FoxPuppet && mkdir results && ./install-test-dependencies.sh && tox
     - cp -r FoxPuppet/results $CIRCLE_ARTIFACTS
