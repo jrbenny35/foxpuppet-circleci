@@ -23,3 +23,5 @@ pip install tox mozdownload mozinstall
 mkdir -p /home/ubuntu/firefox-downloads/
 find /home/ubuntu/firefox-downloads/ -type f -mtime +90 -delete
 mozdownload --version latest --type daily --destination /home/ubuntu/firefox-downloads/firefox_nightly/
+mozinstall $(ls -t /home/ubuntu/firefox-downloads/firefox_nightly/*.tar.bz2 | head -1)
+firefox --version
