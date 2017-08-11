@@ -13,7 +13,5 @@ dependencies:
 
 test:
   override:
-    - cd FoxPuppet
-    - mkdir results
-    - tox
-    - cp -r results $CIRCLE_ARTIFACTS
+    - cd FoxPuppet && mkdir results && tox
+    - cp -r FoxPuppet/results $CIRCLE_ARTIFACTS
