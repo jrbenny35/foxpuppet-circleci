@@ -26,4 +26,4 @@ mozinstall $(ls -t /home/ubuntu/firefox-downloads/firefox_nightly/*.tar.bz2 | he
 firefox --version
 cd FoxPuppet
 mkdir results
-tox
+tox -- -k -n 4
