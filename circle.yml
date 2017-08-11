@@ -12,5 +12,5 @@ dependencies:
 
 test:
   override:
-    - cd FoxPuppet && mkdir results && ./install-test-dependencies.sh && tox
+    - ./run-test.sh
     - cp -r FoxPuppet/results $CIRCLE_ARTIFACTS
